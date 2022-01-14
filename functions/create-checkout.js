@@ -20,6 +20,7 @@ app.post('/create-checkout-session', async (req, res) => {
         success_url: 'https://naughty-williams-126c1a.netlify.app/',
         cancel_url: 'https://naughty-williams-126c1a.netlify.app/'
     });
+    console.log(session)
     res.redirect(303, session.url)
 })
 

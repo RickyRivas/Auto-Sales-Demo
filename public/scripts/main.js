@@ -33,6 +33,7 @@ const createCheckout = async (product) => {
 // create checkout only send product id to the back
 const product = document.querySelector('#product')
     .addEventListener('click', e => {
+        e.stopPropagation();
         const qty = 1;
         const product = {
             id: e.target.dataset.id,
