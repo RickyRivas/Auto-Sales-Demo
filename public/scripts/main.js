@@ -24,7 +24,10 @@ const createCheckout = async (product) => {
             },
             mode: 'cors',
             body: JSON.stringify(product)
-        }).then(res => res.json()).catch((err) => {
+        }).then(res => () => {
+            const body = await res.json();
+            window.location = body.url
+        }).catch((err) => {
             console.log(err)
         })
         console.log(response)
