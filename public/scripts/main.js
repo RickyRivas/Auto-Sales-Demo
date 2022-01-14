@@ -18,12 +18,15 @@ navOverlay.addEventListener('click', toggleEverything)
 const createCheckout = async (product) => {
     try {
         const response = await fetch('/.netlify/functions/create-checkout', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
             },
-                body: JSON.stringify(product)
-        }).then(res => res.json())
+            mode: 'cors',
+            body: JSON.stringify(product)
+        }).then(res => res.json()).catch((err) => {
+            console.log(err)
+        })
         console.log(response)
 
     } catch (error) {
