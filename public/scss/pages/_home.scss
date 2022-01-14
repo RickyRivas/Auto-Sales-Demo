@@ -1,0 +1,41 @@
+@media (min-width: 0em) {
+
+    // All sections will have an id
+    #landing {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #product {
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: $box-shadow;
+
+            .product-body {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+
+                h1 {
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin-bottom: 1.2rem;
+                    line-height: 2;
+                }
+
+                button {
+                    padding: .5rem;
+                    border: 0;
+                    background-color: orangered;
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "stripe-demo-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "functions/create-checkout.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon create-checkout"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "stripe": "^8.197.0"
+  }
+}
