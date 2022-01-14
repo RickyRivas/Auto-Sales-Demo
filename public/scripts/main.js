@@ -22,8 +22,7 @@ const createCheckout = async () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-            })
-            console.log(response)
+        }).then(res => res.json())
         console.log(response)
 
     } catch (error) {
@@ -33,11 +32,11 @@ const createCheckout = async () => {
 // create checkout only send product id to the back
 const product = document.querySelector('#product')
     .addEventListener('click', e => {
-        e.stopPropagation();
-        const qty = 1;
-        const product = {
-            id: e.target.dataset.id,
-            quantity: qty
-        }
+        e.stopPropagation()
+        // const qty = 1;
+        // const product = {
+        //     id: e.target.dataset.id,
+        //     quantity: qty
+        // }
         createCheckout();
     })
