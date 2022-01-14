@@ -8,6 +8,13 @@ const bodyParser = require('body-parser');
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }))
 
+
+app.use((req, res, next) => {
+      res.header('Access-Control-Allow-Origin', '*');
+      next();
+});
+    
+
 app.post('/.netlify/functions/create-checkout', async (req, res) => {
   console.log('hey')
   const session = await stripe.checkout.sessions.create({
@@ -17,7 +24,7 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
         product_data: {
           name: 'T-shirt',
         },
-        unit_amount: 2500,
+        unit_amount: 300000,
       },
       quantity: 1,
     }, ],
@@ -29,7 +36,7 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
 
   // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.redirect(303, session.url);
-    res.header("Access-Control-Allow-Origin", "*");
+
 });
 
 
