@@ -2,10 +2,10 @@
   "name": "stripe-demo-1",
   "version": "1.0.0",
   "description": "",
-  "main": "create-checkout.js",
+  "main": "./functions/create-checkout",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon create-checkout"
+    "test": "node create-checkout",
+    "start": "nodemon ./functions/create-checkout"
   },
   "keywords": [],
   "author": "",
