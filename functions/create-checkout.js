@@ -4,7 +4,9 @@ const serverless = require('serverless-http')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const bodyParser = require('body-parser');
 
-app.use(bodyParser);
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
 
 app.post('/create-checkout-session', async (req, res) => {
     res.send(req.body)
