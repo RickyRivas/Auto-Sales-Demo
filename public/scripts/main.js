@@ -23,7 +23,7 @@ const createCheckout = async () => {
                     'Content-Type': 'application/json'
                 },
             })
-            .then(res => res.json())
+            console.log(response)
         console.log(response)
 
     } catch (error) {
