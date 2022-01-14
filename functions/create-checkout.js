@@ -26,8 +26,8 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
     cancel_url: 'https://naughty-williams-126c1a.netlify.app/',
   });
 
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Origin", "https://naughty-williams-126c1a.netlify.app/");
+  // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.redirect(303, session.url);
 });
 
