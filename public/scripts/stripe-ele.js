@@ -1,4 +1,4 @@
-const checkoutBtn = document.querySelector('#checkoutBtn')
+const checkoutBtn = document.querySelector('#checkout-btn')
     .addEventListener('click', () => {
         initialize();
         checkStatus();
