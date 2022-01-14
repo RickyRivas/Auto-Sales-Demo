@@ -15,7 +15,7 @@ burger.addEventListener('click', toggleEverything)
 navOverlay.addEventListener('click', toggleEverything)
 
 
-const createCheckout = async (product) => {
+const createCheckout = async () => {
     try {
         const response = await fetch('/.netlify/functions/create-checkout', {
                 method: 'POST',
@@ -24,7 +24,7 @@ const createCheckout = async (product) => {
                 },
             })
             .then(res => res.json())
-        console.log(response, product)
+        console.log(response)
 
     } catch (error) {
         console.log(error)
@@ -39,5 +39,5 @@ const product = document.querySelector('#product')
             id: e.target.dataset.id,
             quantity: qty
         }
-        createCheckout(product);
+        createCheckout();
     })
