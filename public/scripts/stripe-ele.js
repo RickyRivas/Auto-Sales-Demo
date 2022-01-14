@@ -47,7 +47,7 @@ async function handleSubmit(e) {
     } = await stripe.confirmPayment({
         elements,
         confirmParams: {
-            return: "http://localhost:8888/index.html"
+            return_url: "http://localhost:8888/index.html"
         }
     })
 
