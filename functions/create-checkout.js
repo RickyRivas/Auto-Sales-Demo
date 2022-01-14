@@ -5,14 +5,14 @@ const serverless = require('serverless-http')
 const stripe = require('stripe')('sk_test_51KHf12AC31TQrdAWF4dtXXzd1DuI26OpkShLsQwCwENmYb4GB1PhX6utzbGb4dgFCNBj9oBQ4YxM4zr14rvTMN2700UBybxiqz')
 const bodyParser = require('body-parser');
 
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 
-app.use((req, res, next) => {
-      res.header('Access-Control-Allow-Origin', '*');
-      next();
-});
+// app.use((req, res, next) => {
+//       res.header('Access-Control-Allow-Origin', '*');
+//       next();
+// });
     
 
 app.post('/.netlify/functions/create-checkout', async (req, res) => {
