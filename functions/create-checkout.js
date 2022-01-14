@@ -9,27 +9,27 @@ app.use(cors({
   origin: ['https://naughty-williams-126c1a.netlify.app/']
 }))
 app.post('/.netlify/functions/create-checkout', async (req, res) => {
-console.log('hey')
+  console.log('hey')
   const session = await stripe.checkout.sessions.create({
-    line_items: [
-      {
-        price_data: {
-          currency: 'usd',
-          product_data: {
-            name: 'T-shirt',
-          },
-          unit_amount: 2500,
+    line_items: [{
+      price_data: {
+        currency: 'usd',
+        product_data: {
+          name: 'T-shirt',
         },
-        quantity: 1,
+        unit_amount: 2500,
       },
-    ],
+      quantity: 1,
+    }, ],
     mode: 'payment',
     success_url: 'https://naughty-williams-126c1a.netlify.app/',
     cancel_url: 'https://naughty-williams-126c1a.netlify.app/',
   });
 
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.redirect(303, session.url);
 });
 
 
-module.exports.handler = serverless(app)  
+module.exports.handler = serverless(app)
