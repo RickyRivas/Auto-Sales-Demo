@@ -12,7 +12,7 @@ console.log('hey')
     line_items: [
       {
         price_data: {
-          currency: 'usd',
+          currency: 'USD',
           product_data: {
             name: 'T-shirt',
           },
