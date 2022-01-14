@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express();
+const serverless = require('serverless-http')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const bodyParser = require('body-parser');
 
@@ -25,6 +26,6 @@ app.post('/create-checkout-session', async (req, res) => {
 
   res.redirect(303, session.url);
 });
-app.listen(4242, () => {
-    console.log('listening on port 4242')
-})
+
+
+module.exports.handler = serverless(app)
