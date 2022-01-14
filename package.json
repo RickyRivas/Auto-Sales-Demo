@@ -2,7 +2,7 @@
   "name": "stripe-demo-1",
   "version": "1.0.0",
   "description": "",
-  "main": "functions/create-checkout.js",
+  "main": "/.netlify/functions/create-checkout.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon create-checkout"
