@@ -12,11 +12,11 @@ console.log('hey')
     line_items: [
       {
         price_data: {
-          currency: 'USD',
+          currency: 'usd',
           product_data: {
             name: 'T-shirt',
           },
-          unit_amount: 2000,
+          unit_amount: 2500,
         },
         quantity: 1,
       },
