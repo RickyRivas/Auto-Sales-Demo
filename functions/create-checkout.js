@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
+const bodyParser = require('body-parser');
 
-
-
+app.use(bodyParser);
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: [
