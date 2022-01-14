@@ -17,7 +17,7 @@ navOverlay.addEventListener('click', toggleEverything)
 
 const createCheckout = async (product) => {
     try {
-        const response = await fetch('/.netlify/functions/create-checkout-session', {
+        const response = await fetch('/.netlify/functions/create-checkout', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
