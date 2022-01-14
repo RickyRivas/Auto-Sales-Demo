@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express();
-const cors = require('cors')
 const serverless = require('serverless-http')
 const stripe = require('stripe')('sk_test_51KHf12AC31TQrdAWF4dtXXzd1DuI26OpkShLsQwCwENmYb4GB1PhX6utzbGb4dgFCNBj9oBQ4YxM4zr14rvTMN2700UBybxiqz')
 // const bodyParser = require('body-parser');

@@ -56,7 +56,7 @@
         <!-- Landing Section Start -->
         <section id='landing'>
             <div id='product'>
-                <img src='/public/assets/TA_nose_art.jpg'>
+                <img src='assets/TA_nose_art.jpg'>
                 <div class='product-body'>
                     <h1>tulsAmerican</h1>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam soluta hic eaque facere mollitia
@@ -67,6 +67,20 @@
             </div>
         </section>
         <!-- Landing Section End -->
+        <!-- Stripe elements start-->
+        <section id='ele'>
+            <form id="payment-form">
+                <div id="payment-element">
+                    <!--Stripe.js injects the Payment Element-->
+                </div>
+                <button id="submit">
+                    <div class="spinner hidden" id="spinner"></div>
+                    <span id="button-text">Pay now</span>
+                </button>
+                <div id="payment-message" class="hidden"></div>
+            </form>
+        </section>
+        <!-- Stripe elements end-->
     </main>
     <!-- Main End -->
     <!-- Footer -->
@@ -142,6 +156,7 @@
     <!-- Scripts -->
     <script src="https://js.stripe.com/v3/"></script>
     <script src='scripts/main.js'></script>
+    <script src='scripts//stripe-ele.js'></script>
 </body>
 
 </html>

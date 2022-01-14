@@ -5,7 +5,7 @@
   "main": "./functions/create-checkout",
   "scripts": {
     "test": "node create-checkout",
-    "start": "nodemon ./functions/create-checkout"
+    "start": "nodemon ./functions/stripe-elements"
   },
   "keywords": [],
   "author": "",
