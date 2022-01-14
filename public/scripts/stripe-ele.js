@@ -26,7 +26,7 @@ async function initialize() {
     } = await response.json();
 
     const appearance = {
-        theme: 'stripe'
+        theme: 'flat'
     }
 
     elements = stripe.elements({
