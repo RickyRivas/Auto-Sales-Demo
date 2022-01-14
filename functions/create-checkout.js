@@ -25,7 +25,7 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
   });
 
 
-  res.json({url: session.url})
+  res.status(303).json({url: session.url})
 });
 
 
