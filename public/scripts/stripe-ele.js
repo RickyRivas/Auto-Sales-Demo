@@ -72,7 +72,7 @@ async function checkStatus() {
         paymentIntent
     } = await stripe.retrievePaymentIntent(clientSecret);
 
-    switch (paymentIntent.staus) {
+    switch (paymentIntent.status) {
         case 'succeeded':
             showMessage("payment succeeded!")
             break;
