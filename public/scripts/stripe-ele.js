@@ -1,3 +1,10 @@
+const checkoutBtn = document.querySelector('#checkoutBtn')
+    .addEventListener('click', () => {
+        initialize();
+        checkStatus();
+    })
+
+
 const stripe = Stripe('pk_test_51KHf12AC31TQrdAWUG5SSpuSMqB3ZaPURX1rBO3WhDq7OZeN76i49SkCdlPfMc6VfIXzeehqKkoDZLI66eXdbIQo00zfqx6hXp')
 
 const items = [{
@@ -5,9 +12,6 @@ const items = [{
 }];
 
 let elements;
-
-initialize();
-checkStatus();
 
 document.querySelector('#payment-form')
     .addEventListener('submit', handleSubmit);

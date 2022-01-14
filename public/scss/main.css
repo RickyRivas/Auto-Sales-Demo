@@ -1051,6 +1051,11 @@ button {
   width: 100%;
 }
 
+#checkoutBtn {
+  margin-bottom: 1rem;
+  max-width: 450px;
+}
+
 button:hover {
   -webkit-filter: contrast(115%);
           filter: contrast(115%);
