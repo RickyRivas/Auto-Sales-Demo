@@ -14,7 +14,7 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
         product_data: {
           name: 'T-shirt',
         },
-        unit_amount: 300000,
+        unit_amount: 10000,
       },
       quantity: 1,
     }, ],
