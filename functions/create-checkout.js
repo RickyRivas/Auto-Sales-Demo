@@ -2,9 +2,9 @@ const express = require('express')
 const app = express();
 const serverless = require('serverless-http')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
-// app.use(bodyParser);
+app.use(bodyParser);
 
 app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
