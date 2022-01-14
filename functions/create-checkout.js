@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser);
 
 app.post('/create-checkout-session', async (req, res) => {
+    res.send(req.body)
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {
