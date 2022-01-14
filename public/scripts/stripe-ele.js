@@ -47,7 +47,7 @@ async function handleSubmit(e) {
     } = await stripe.confirmPayment({
         elements,
         confirmParams: {
-            return_url: "http://localhost:8888/index.html"
+            return_url: "https://naughty-williams-126c1a.netlify.app/"
         }
     })
 
