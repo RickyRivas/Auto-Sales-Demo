@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json())
 
 app.post('/.netlify/functions/create-checkout', async (req, res) => {
-
+console.log('hey')
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {
