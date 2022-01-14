@@ -1,11 +1,6 @@
 const express = require('express')
-const bodyParser = require('body-parser');
 const app = express();
 const stripe = require('stripe')('sk_test_51KHf12AC31TQrdAWF4dtXXzd1DuI26OpkShLsQwCwENmYb4GB1PhX6utzbGb4dgFCNBj9oBQ4YxM4zr14rvTMN2700UBybxiqz')
-
-app.use(bodyParser.urlencoded({
-    extended: false
-}))
 
 app.post('/create-checkout-session', async (req, res) => {
     const product = {
@@ -22,8 +17,8 @@ app.post('/create-checkout-session', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
         line_items: [product],
         mode: 'payment',
-        success_url: '',
-        cancel_url: ''
+        success_url: 'https://naughty-williams-126c1a.netlify.app/',
+        cancel_url: 'https://naughty-williams-126c1a.netlify.app/'
     });
     res.redirect(303, session.url)
 })
