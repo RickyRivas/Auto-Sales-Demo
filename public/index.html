@@ -30,22 +30,22 @@
     <header>
         <nav>
             <div class='logo-wrapper'>
-                <img src='assets/RLOGO1-01.svg' class='' alt=''>
-                <p>R Web Designs</p>
+                <img src='assets/logo-mockup/loremlogo.png' class='' alt=''>
             </div>
             <div class='navlinks-overlay'></div>
             <ul class="nav-links">
                 <li class="nav-link"><a href="index.html">Home</a></li>
+                <li class="nav-link"><a href="#">Services</a></li>
                 <li class="nav-link"><a href="#">Portfolio</a></li>
-                <li class="nav-link"><a href="#">Pricing</a></li>
-                <li class="nav-link"><a href="#">Gallery</a></li>
                 <li class="nav-link"><a href="#">About</a></li>
+                <li class="nav-link"><a href="#">Contact</a></li>
+                <li class='social-media'>
+                    <img src='assets/instagramwhite.svg' alt="instagram icon" class="">
+                    <img src='assets/facebook-logo.svg' alt="instagram icon" class="">
+                </li>
             </ul>
-
-            <button class="hamburger hamburger--squeeze" type="button" aria-label="Navigation Toggle"
-                aria-controls="navigation">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
+            <button class="hamburger" type="button" aria-label="Navigation Toggle" aria-controls="navigation">
+                <span class="hamburger-inner">
                 </span>
             </button>
         </nav>
@@ -55,33 +55,18 @@
     <main>
         <!-- Landing Section Start -->
         <section id='landing'>
-            <div id='product'>
-                <img src='assets/TA_nose_art.jpg'>
-                <div class='product-body'>
-                    <h1>tulsAmerican</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam soluta hic eaque facere mollitia
-                        voluptatibus!</p>
-                    <p>$300,000</p>
-                    <button data-id='prod_KxaOe4lbnnR7Hr'>Purchase</button>
+            <div class="container">
+                <h1>Rivas Auto Sales</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic odio architecto nulla aut, error maxime
+                    corporis accusantium iure ex. Commodi.</p>
+                <div class="btns">
+                    <a href="" class="cta cta-1">View Inventory</a>
+                    <a href="" class="cta">View Gallery</a>
                 </div>
+
             </div>
         </section>
         <!-- Landing Section End -->
-        <!-- Stripe elements start-->
-        <section id='ele'>
-            <button id='checkout-btn'>Checkout</button>
-            <form id="payment-form">
-                <div id="payment-element">
-                    <!--Stripe.js injects the Payment Element-->
-                </div>
-                <button id="submit">
-                    <div class="spinner hidden" id="spinner"></div>
-                    <span id="button-text">Pay now</span>
-                </button>
-                <div id="payment-message" class="hidden"></div>
-            </form>
-        </section>
-        <!-- Stripe elements end-->
     </main>
     <!-- Main End -->
     <!-- Footer -->
@@ -156,8 +141,10 @@
     <!-- Footer -->
     <!-- Scripts -->
     <script src="https://js.stripe.com/v3/"></script>
+    <script src='scripts/navbar.js'></script>
     <script src='scripts/main.js'></script>
-    <script src='scripts//stripe-ele.js'></script>
+    <!-- <script src='scripts//stripe-ele.js'></script> -->
+
 </body>
 
 </html>

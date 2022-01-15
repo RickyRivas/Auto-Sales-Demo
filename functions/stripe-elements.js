@@ -29,3 +29,19 @@ app.post("/.netlify/functions/stripe-elements", async (req, res) => {
 })
 
 module.exports.handler = serverless(app);
+
+    //    <!-- Stripe elements start-->
+    //     <section id='ele'>
+    //         <button id='checkout-btn'>Checkout</button>
+    //         <form id="payment-form">
+    //             <div id="payment-element">
+    //                 <!--Stripe.js injects the Payment Element-->
+    //             </div>
+    //             <button id="submit">
+    //                 <div class="spinner hidden" id="spinner"></div>
+    //                 <span id="button-text">Pay now</span>
+    //             </button>
+    //             <div id="payment-message" class="hidden"></div>
+    //         </form>
+    //     </section>
+    //     <!-- Stripe elements end-->
