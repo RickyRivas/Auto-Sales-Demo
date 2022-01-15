@@ -631,7 +631,7 @@ body.dark-mode .theme-toggle {
 
 @media (min-width: 0em) {
   #landing {
-    height: 100vh;
+    height: 70vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -698,6 +698,111 @@ body.dark-mode .theme-toggle {
   }
   #landing .container .btns .cta-1:hover {
     background-color: orangered;
+  }
+  #featured {
+    width: 100%;
+    padding: 2rem .5rem;
+  }
+  #featured .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  #featured .heading h2 {
+    margin-bottom: 1rem;
+  }
+  #featured #inventory {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    grid-gap: 1rem;
+    place-items: center;
+  }
+  #featured #inventory .item {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: .5rem;
+  }
+  #featured #inventory .item .img-container {
+    width: 100%;
+    height: 250px;
+    position: relative;
+  }
+  #featured #inventory .item .img-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: .5rem .5rem 0 0;
+  }
+  #featured #inventory .item .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+  }
+  #featured #inventory .item .body > div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #featured #inventory .item .body > div h1 {
+    margin-bottom: 1rem;
+  }
+  #featured #inventory .item .body .btns {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    grid-gap: .5rem;
+  }
+  #featured #inventory .item .body .btns button {
+    width: 100%;
+    padding: 10px 30px;
+    background-color: orangered;
+    border: 0;
+    color: white;
+    text-transform: uppercase;
+  }
+  #featured #inventory .item .body .btns button:nth-of-type(1) {
+    background-color: black;
   }
 }
 

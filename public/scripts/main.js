@@ -34,4 +34,51 @@ const createCheckout = async (product) => {
         console.log(error)
     }
 }
+
 // create checkout only send product id to the back
+// import data and display it in inventory section
+
+const output = document.querySelector('#inventory');
+const vehicles = [{
+        title: 'Tesla Model X',
+        price: 89999,
+        desc: 'lorem inpsum decs one tewo three',
+        img: '/assets/teslax.jpeg'
+    },
+    {
+        title: 'Tesla Model Y',
+        price: 999999,
+        desc: 'lorem inpsum decs one tewo three',
+        img: '/assets/teslay.jpeg'
+    },
+    {
+        title: 'Tesla Model S',
+        price: 540000,
+        desc: 'lorem inpsum decs one tewo three',
+        img: '/assets/teslas.jpeg'
+    }
+]
+let result = '';
+const displayVehicles = (vehicles) => {
+    vehicles.forEach(vehicle => {
+        result += `
+        <div class='item'>
+            <div class='img-container'>
+                <img src='${vehicle.img}'>
+            </div>
+            <div class='body'>
+            <div>
+                <h1>${vehicle.title}</h1>
+                <p>Starting at $${vehicle.price}</p>
+            </div>
+            <div class='btns'>
+                <button>Inquire</button>
+                <button>Buy Now</button>
+            </div>
+            </div>
+        </div>
+        `
+        output.innerHTML = result
+    })
+}
+displayVehicles(vehicles);
