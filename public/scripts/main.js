@@ -46,8 +46,8 @@ const vehicles = [{
         imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslax.jpeg'],
         id: 1,
         stats: {
-            range: 369,
-            topSpeed: 200,
+            range: 333,
+            topSpeed: 2.5,
             horsePower: 1020
         }
     },
@@ -58,8 +58,8 @@ const vehicles = [{
         imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslay.jpeg'],
         id: 2,
         stats: {
-            range: 369,
-            topSpeed: 200,
+            range: 330,
+            topSpeed: 150,
             horsePower: 1020
         }
     },
