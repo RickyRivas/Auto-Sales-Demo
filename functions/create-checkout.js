@@ -35,9 +35,15 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
     shipping_address_collection: {
       allowed_countries: ['US', 'CA'],
     },
+    // get email for promotional offers
+    consent_collection: {
+      promotions: 'auto',
+    },
+    // taxes
     automatic_tax: {
       enabled: true,
     },
+    // shipping options
     shipping_options: [{
         shipping_rate_data: {
           type: 'fixed_amount',
