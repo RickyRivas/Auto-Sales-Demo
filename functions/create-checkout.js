@@ -35,15 +35,9 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
     shipping_address_collection: {
       allowed_countries: ['US', 'CA'],
     },
-    // get email for promotional offers
     consent_collection: {
       promotions: 'auto',
     },
-    // taxes
-    automatic_tax: {
-      enabled: true,
-    },
-    // shipping options
     shipping_options: [{
         shipping_rate_data: {
           type: 'fixed_amount',
@@ -52,7 +46,6 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
             currency: 'usd',
           },
           display_name: 'Free shipping',
-          // # Delivers between 5-7 business days
           delivery_estimate: {
             minimum: {
               unit: 'business_day',
@@ -73,7 +66,6 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
             currency: 'usd',
           },
           display_name: 'Next day air',
-          //  # Delivers in exactly 1 business day
           delivery_estimate: {
             minimum: {
               unit: 'business_day',
@@ -87,8 +79,8 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
         }
       },
     ],
-    success_url: req.get("origin"),
-    cancel_url: req.get("origin")
+    success_url: 'https://naughty-williams-126c1a.netlify.app',
+    cancel_url: 'https://naughty-williams-126c1a.netlify.app'
   });
 
 
