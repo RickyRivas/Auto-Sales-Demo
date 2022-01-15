@@ -15,7 +15,7 @@ burger.addEventListener('click', toggleEverything)
 navOverlay.addEventListener('click', toggleEverything)
 
 
-const createCheckout = async (product) => {
+const createCheckout = async (item) => {
     try {
         const response = await fetch('/.netlify/functions/create-checkout', {
             method: 'POST',
@@ -23,7 +23,7 @@ const createCheckout = async (product) => {
                 'Content-Type': 'application/json'
             },
             mode: 'cors',
-            body: JSON.stringify(product)
+            body: JSON.stringify(item)
         });
 
         const body = await response.json();
@@ -43,19 +43,22 @@ const vehicles = [{
         title: 'Tesla Model X',
         price: 89999,
         desc: 'lorem inpsum decs one tewo three',
-        img: '/assets/teslax.jpeg'
+        imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslax.jpeg'],
+        id: 1,
     },
     {
         title: 'Tesla Model Y',
-        price: 999999,
+        price: 99999,
         desc: 'lorem inpsum decs one tewo three',
-        img: '/assets/teslay.jpeg'
+        imgs: ['/assets/teslay.jpeg'],
+        id: 2
     },
     {
         title: 'Tesla Model S',
-        price: 540000,
+        price: 54000,
         desc: 'lorem inpsum decs one tewo three',
-        img: '/assets/teslas.jpeg'
+        imgs: ['/assets/teslas.jpeg'],
+        id: 3
     }
 ]
 let result = '';
@@ -64,7 +67,7 @@ const displayVehicles = (vehicles) => {
         result += `
         <div class='item'>
             <div class='img-container'>
-                <img src='${vehicle.img}'>
+                <img src='${vehicle.imgs[0]}'>
             </div>
             <div class='body'>
             <div>
@@ -73,7 +76,7 @@ const displayVehicles = (vehicles) => {
             </div>
             <div class='btns'>
                 <button>Inquire</button>
-                <button>Buy Now</button>
+                <button id='checkoutVehicle' data-id='${vehicle.id}'>Buy Now</button>
             </div>
             </div>
         </div>
@@ -81,4 +84,14 @@ const displayVehicles = (vehicles) => {
         output.innerHTML = result
     })
 }
+
 displayVehicles(vehicles);
+
+const allCheckoutVehicleBtns = document.querySelectorAll('#checkoutVehicle');
+allCheckoutVehicleBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const foundProd = vehicles.find(item => item.id === +e.target.dataset.id);
+        console.log(foundProd)
+        createCheckout(foundProd)
+    })
+})
