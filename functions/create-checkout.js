@@ -18,15 +18,19 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
       },
       unit_amount: req.body.price * 100
     },
+      adjustable_quantity: {
+        enabled: true,
+        minimum: 1,
+        maximum: 10,
+      },
     quantity: 1,
   }
 
   items.push(obj)
-  
+
   const session = await stripe.checkout.sessions.create({
     line_items: items,
     mode: 'payment',
-    payment_method_types: ['card'],
     billing_address_collection: 'auto',
     shipping_address_collection: {
       allowed_countries: ['US', 'CA'],
