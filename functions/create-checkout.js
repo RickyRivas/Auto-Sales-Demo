@@ -18,11 +18,11 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
       },
       unit_amount: req.body.price * 100
     },
-      adjustable_quantity: {
-        enabled: true,
-        minimum: 1,
-        maximum: 10,
-      },
+    adjustable_quantity: {
+      enabled: true,
+      minimum: 1,
+      maximum: 10,
+    },
     quantity: 1,
   }
 
@@ -35,8 +35,10 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
     shipping_address_collection: {
       allowed_countries: ['US', 'CA'],
     },
-    shipping_options: [
-      {
+    automatic_tax: {
+      enabled: true,
+    },
+    shipping_options: [{
         shipping_rate_data: {
           type: 'fixed_amount',
           fixed_amount: {
@@ -65,7 +67,7 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
             currency: 'usd',
           },
           display_name: 'Next day air',
-            //  # Delivers in exactly 1 business day
+          //  # Delivers in exactly 1 business day
           delivery_estimate: {
             minimum: {
               unit: 'business_day',
@@ -79,8 +81,8 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
         }
       },
     ],
-      success_url: req.get("origin"),
-      cancel_url: req.get("origin")
+    success_url: req.get("origin"),
+    cancel_url: req.get("origin")
   });
 
 
