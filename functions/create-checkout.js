@@ -8,15 +8,19 @@ const items = [];
 app.use(express.json());
 app.post('/.netlify/functions/create-checkout', async (req, res) => {
 
+const product = await stripe.products.retrieve(
+  req.body.id
+);
+  
   const obj = {
     price_data: {
       currency: 'usd',
       product_data: {
-        name: req.body.title,
-        description: req.body.desc,
-        images: [req.body.imgs[0]]
+        name: product.title,
+        description: product.description,
+        images: [product.images[0]]
       },
-      unit_amount: req.body.price * 100
+      unit_amount: product.price * 100
     },
     adjustable_quantity: {
       enabled: true,
@@ -79,8 +83,8 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
         }
       },
     ],
-    success_url: 'https://naughty-williams-126c1a.netlify.app',
-    cancel_url: 'https://naughty-williams-126c1a.netlify.app'
+    success_url: 'https://naughty-williams-126c1a.netlify.app/',
+    cancel_url: 'https://naughty-williams-126c1a.netlify.app/'
   });
 
 
