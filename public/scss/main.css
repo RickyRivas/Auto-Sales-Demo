@@ -801,6 +801,9 @@ body.dark-mode .theme-toggle {
     color: white;
     text-transform: uppercase;
   }
+  #featured #inventory .item .body .btns button:disabled {
+    opacity: .5;
+  }
   #featured #inventory .item .body .btns button:nth-of-type(1) {
     background-color: black;
   }

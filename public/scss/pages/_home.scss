@@ -133,6 +133,9 @@
                             border: 0;
                             color: white;
                             text-transform: uppercase;
+                            &:disabled{
+                                opacity: .5;
+                            }
                         }
 
                         & button:nth-of-type(1) {
