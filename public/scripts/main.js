@@ -45,7 +45,11 @@ const vehicles = [{
         desc: 'lorem inpsum decs one tewo three',
         imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslax.jpeg'],
         id: 1,
-        qty: 1
+        stats: {
+            range: 369,
+            topSpeed: 200,
+            horsePower: 1020
+        }
     },
     {
         title: 'Tesla Model Y',
@@ -53,7 +57,11 @@ const vehicles = [{
         desc: 'lorem inpsum decs one tewo three',
         imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslay.jpeg'],
         id: 2,
-        qty: 0
+        stats: {
+            range: 369,
+            topSpeed: 200,
+            horsePower: 1020
+        }
     },
     {
         title: 'Tesla Model S',
@@ -61,7 +69,11 @@ const vehicles = [{
         desc: 'lorem inpsum decs one tewo three',
         imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslas.jpeg'],
         id: 3,
-        qty: 5
+        stats: {
+            range: 369,
+            topSpeed: 200,
+            horsePower: 1020
+        }
     }
 ]
 let result = '';
@@ -79,6 +91,20 @@ const displayVehicles = (vehicles) => {
         >
             <div class='img-container'>
                 <img src='${vehicle.imgs[0]}'>
+                <div class='overlay'>
+                    <div class='stat'>
+                        <p>${vehicle.stats.range} mi</p>
+                        <p>Range (EPA est.)</p>
+                    </div>
+                    <div class='stat'>
+                        <p>${vehicle.stats.topSpeed} s</p>
+                        <p>0-60 mph</p>
+                    </div>
+                    <div class='stat'>
+                        <p>${vehicle.stats.horsePower} hp</p>
+                        <p>Top Speed</p>
+                    </div>
+                </div>
             </div>
             <div class='body'>
             <div>
