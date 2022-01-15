@@ -4,7 +4,7 @@ const serverless = require('serverless-http')
 const stripe = require('stripe')('sk_test_51KHf12AC31TQrdAWF4dtXXzd1DuI26OpkShLsQwCwENmYb4GB1PhX6utzbGb4dgFCNBj9oBQ4YxM4zr14rvTMN2700UBybxiqz')
 // const bodyParser = require('body-parser');
 
-const items = [];
+// const items = [];
 app.use(express.json());
 app.post('/.netlify/functions/create-checkout', async (req, res) => {
 
@@ -27,10 +27,10 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
     quantity: 1,
   }
 
-  items.push(obj)
+  // items.push(obj)
 
   const session = await stripe.checkout.sessions.create({
-    line_items: items,
+    line_items: [obj],
     mode: 'payment',
     billing_address_collection: 'auto',
     shipping_address_collection: {
