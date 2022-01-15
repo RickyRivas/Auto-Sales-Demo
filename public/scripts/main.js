@@ -15,7 +15,7 @@ burger.addEventListener('click', toggleEverything)
 navOverlay.addEventListener('click', toggleEverything)
 
 
-const createCheckout = async (id) => {
+const createCheckout = async (prod) => {
     try {
         const response = await fetch('/.netlify/functions/create-checkout', {
             method: 'POST',
@@ -23,7 +23,7 @@ const createCheckout = async (id) => {
                 'Content-Type': 'application/json'
             },
             mode: 'cors',
-            body: JSON.stringify(id)
+            body: JSON.stringify(prod)
         });
 
         const body = await response.json();
@@ -44,7 +44,7 @@ const vehicles = [{
         price: 89999,
         desc: 'lorem inpsum decs one tewo three',
         imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslax.jpeg'],
-        id: "prod_KxaOe4lbnnR7Hr",
+        id: 1,
     },
     {
         title: 'Tesla Model Y',
@@ -90,10 +90,7 @@ displayVehicles(vehicles);
 const allCheckoutVehicleBtns = document.querySelectorAll('#checkoutVehicle');
 allCheckoutVehicleBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        // const foundProd = vehicles.find(item => item.id === +e.target.dataset.id);
-        // send id to the back
-        const id = e.target.dataset.id
-        console.log(id)
-        createCheckout(id)
+        const foundProd = vehicles.find(item => item.id === +e.target.dataset.id);
+        createCheckout(foundProd)
     })
 })
