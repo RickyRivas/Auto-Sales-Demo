@@ -7,7 +7,7 @@ const stripe = require('stripe')('sk_test_51KHf12AC31TQrdAWF4dtXXzd1DuI26OpkShLs
 const items = [];
 app.use(express.json());
 app.post('/.netlify/functions/create-checkout', async (req, res) => {
-  console.log(req.body.imgs)
+
   const obj = {
     price_data: {
       currency: 'usd',
@@ -20,10 +20,17 @@ app.post('/.netlify/functions/create-checkout', async (req, res) => {
     },
     quantity: 1,
   }
+
   items.push(obj)
+  
   const session = await stripe.checkout.sessions.create({
     line_items: items,
     mode: 'payment',
+    payment_method_types: ['card'],
+    billing_address_collection: 'auto',
+    shipping_address_collection: {
+      allowed_countries: ['US', 'CA'],
+    },
     success_url: 'https://naughty-williams-126c1a.netlify.app/',
     cancel_url: 'https://naughty-williams-126c1a.netlify.app/',
   });

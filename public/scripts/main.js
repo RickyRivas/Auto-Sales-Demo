@@ -50,14 +50,14 @@ const vehicles = [{
         title: 'Tesla Model Y',
         price: 99999,
         desc: 'lorem inpsum decs one tewo three',
-        imgs: ['https://naughty-williams-126c1a.netlify.app//assets/teslay.jpeg'],
+        imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslay.jpeg'],
         id: 2
     },
     {
         title: 'Tesla Model S',
         price: 54000,
         desc: 'lorem inpsum decs one tewo three',
-        imgs: ['https://naughty-williams-126c1a.netlify.app//assets/teslas.jpeg'],
+        imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslas.jpeg'],
         id: 3
     }
 ]
