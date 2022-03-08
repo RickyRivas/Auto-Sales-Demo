@@ -27,8 +27,7 @@ const createCheckout = async (prod) => {
         });
 
         const body = await response.json();
-        // window.location = body.url;
-        console.log(body)
+        window.location = body.url;
 
     } catch (error) {
         console.log(error)
