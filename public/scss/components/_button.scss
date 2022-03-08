@@ -7,8 +7,8 @@
     color: white;
     text-decoration: none;
     margin: $margin-sm;
-    border-radius: $border-radius;
     box-shadow: $box-shadow;
+    text-transform: uppercase;
     &:hover{
         opacity: .8;
     }

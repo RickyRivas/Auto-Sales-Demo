@@ -767,9 +767,9 @@ html, body {
   color: white;
   text-decoration: none;
   margin: 0.5rem;
-  border-radius: 0.25rem;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -839,8 +839,8 @@ body.dark-mode .theme-toggle {
         -ms-flex-align: center;
             align-items: center;
     padding: 1rem;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/assets/img01.jpeg) center/cover;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/img01.jpeg) center/cover;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/assets/landingBgM.webp) center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/landingBgM.webp) center/cover;
   }
   #landing .container {
     width: 100%;
@@ -883,7 +883,6 @@ body.dark-mode .theme-toggle {
     text-decoration: none;
     color: white;
     padding: .6rem;
-    border-radius: 2rem;
     background-color: orangered;
     width: 100%;
     text-align: center;
@@ -898,7 +897,7 @@ body.dark-mode .theme-toggle {
   }
   #featured {
     width: 100%;
-    padding: 2rem .5rem;
+    padding: 2rem 1rem;
   }
   #featured .heading {
     display: -webkit-box;
@@ -1106,15 +1105,6 @@ body.dark-mode .theme-toggle {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
-  }
-  #landing .container .btns .cta {
-    text-decoration: none;
-    color: white;
-    padding: .6rem;
-    border-radius: 2rem;
-    background-color: orangered;
-    width: 100%;
-    text-align: center;
   }
   #landing .container .btns .cta-1 {
     margin-right: .5rem;

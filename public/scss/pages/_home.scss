@@ -7,7 +7,7 @@
         justify-content: center;
         align-items: center;
         padding: $padding-md;
-        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/assets/img01.jpeg) center / cover;
+        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/assets/landingBgM.webp) center / cover;
 
         .container {
             width: 100%;
@@ -38,7 +38,7 @@
                     text-decoration: none;
                     color: white;
                     padding: .6rem;
-                    border-radius: 2rem;
+                    // border-radius: 2rem;
                     background-color: orangered;
                     width: 100%;
                     text-align: center;
@@ -59,7 +59,7 @@
 
     #featured {
         width: 100%;
-        padding: 2rem .5rem;
+        padding: 2rem 1rem;
 
         .heading {
             display: flex;
@@ -225,13 +225,6 @@
                 width: 100%;
 
                 .cta {
-                    text-decoration: none;
-                    color: white;
-                    padding: .6rem;
-                    border-radius: 2rem;
-                    background-color: orangered;
-                    width: 100%;
-                    text-align: center;
                 }
 
                 .cta-1 {
