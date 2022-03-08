@@ -27,23 +27,21 @@ const createCheckout = async (prod) => {
         });
 
         const body = await response.json();
-        window.location = body.url;
-        console.log(response)
+        // window.location = body.url;
+        console.log(body)
 
     } catch (error) {
         console.log(error)
     }
 }
 
-// create checkout only send product id to the back
-// import data and display it in inventory section
 
 const output = document.querySelector('#inventory');
 const vehicles = [{
         title: 'Tesla Model X',
         price: 89999,
         desc: 'lorem inpsum decs one tewo three',
-        imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslax.jpeg'],
+        imgs: ['https://rrcarsales.netlify.app/assets/teslax.jpeg'],
         id: 1,
         stats: {
             range: 333,
@@ -55,7 +53,7 @@ const vehicles = [{
         title: 'Tesla Model Y',
         price: 99999,
         desc: 'lorem inpsum decs one tewo three',
-        imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslay.jpeg'],
+        imgs: ['https://rrcarsales.netlify.app/assets/teslay.jpeg'],
         id: 2,
         stats: {
             range: 330,
@@ -67,7 +65,7 @@ const vehicles = [{
         title: 'Tesla Model S',
         price: 54000,
         desc: 'lorem inpsum decs one tewo three',
-        imgs: ['https://naughty-williams-126c1a.netlify.app/assets/teslas.jpeg'],
+        imgs: ['https://rrcarsales.netlify.app/assets/teslas.jpeg'],
         id: 3,
         stats: {
             range: 369,
